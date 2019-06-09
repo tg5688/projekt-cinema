@@ -1,0 +1,22 @@
+.nav-item {
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    @media (max-width: 768px) {
+        margin-top: 1rem;
+    }
+}
+
+.btn-outline-warning {
+    border-width: 3px;
+}
+
+.w-25 {
+    @media (max-width: 992px) {
+        width: 100% !important;
+    }
+}
+
+hr {
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+<main>
+    <section class="py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="my-3">Repertuar</h1>
+                    <hr class="mb-5">
+                    <select class="form-control mt-4 w-25"
+                        onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+                        <option value="" selected disabled hidden>Wybierz kino</option>
+                        <option value="rep/Wrocław">Wrocław</option>
+                        <option value="rep/Katowice">Katowice</option>
+                        <option value="rep/Rybnik">Rybnik</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<%- include('partials/footer') %>

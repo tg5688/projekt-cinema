@@ -1,0 +1,114 @@
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+}
+
+.carousel-item {
+    height: 450px;
+
+    &.carousel-image-1 {
+        background: url('../img/avangers.jpg');
+        background-size: cover;
+    }
+
+    &.carousel-image-2 {
+        background: url('../img/shazam.jpg');
+        background-size: cover;
+    }
+
+    &.carousel-image-3 {
+        background: url('../img/green_book.jpg');
+        background-size: cover;
+    }
+}
+
+.screen {
+    background-color: #ccc;
+    color: color("white");
+}
+
+.seat {
+    width: 27px;
+    height: 27px;
+    background-color: color("cyan");
+    margin: 1px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: .8;
+    }
+
+    &.select {
+        background-color: color("green");
+    }
+
+    &--empty {
+        width: 27px;
+        height: 27px;
+        margin: 1px;
+        opacity: 0;
+        cursor: default;
+    }
+
+    &--book {
+        width: 27px;
+        height: 27px;
+        margin: 1px;
+        background-color: color("gray");
+        cursor: default;
+    }
+}
+
+
+
+.legend {
+    margin: 0 auto;
+
+    &__seat--free {
+        width: 27px;
+        height: 27px;
+        background-color: color("cyan");
+    }
+
+    &__seat--busy {
+        width: 27px;
+        height: 27px;
+        background-color: color("gray");
+    }
+
+    &__seat--select {
+        width: 27px;
+        height: 27px;
+        background-color: color("green");
+    }
+
+    &__text {
+        margin: 0;
+        margin-left: 2px;
+        font-size: .8rem;
+        line-height: 27px;
+    }
+}
+
+.selected-seats {
+    text-align: center;
+
+    &__heading {
+        margin-bottom: .5rem;
+    }
+
+    &__text {
+        text-align: center;
+        font-size: .9rem;
+    }
+}
+
+.footer {
+    margin-top: 2rem;
+    padding: .8rem 0;
+    font-size: .8rem;
+}

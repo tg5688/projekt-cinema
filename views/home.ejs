@@ -1,0 +1,74 @@
+<%- include('partials/header') %>
+
+<main>
+    <div class="slider">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item carousel-image-1 active">
+                    <div class="dark-overlay">
+                        <div class="container">
+                            <div class="carousel-caption d-none d-block text-left mb-5">
+                                <h1 class="display-3">Avangers: Koniec gry </h1>
+                                <a href="/repertuar" class="btn btn-outline-warning mt-2">Kup bilet</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item carousel-image-2">
+                    <div class="dark-overlay">
+                        <div class="container">
+                            <div class="carousel-caption d-none d-block mb-5">
+                                <h1 class="display-3">Shazam!</h1>
+                                <a href="/repertuar" class="btn btn-outline-warning mt-2">Kup bilet</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item carousel-image-3">
+                    <div class="dark-overlay">
+                        <div class="container">
+                            <div class="carousel-caption d-none d-block text-right mb-5">
+                                <h1 class="display-3">Green Book</h1>
+                                <a href="/repertuar" class="btn btn-outline-warning mt-2">Kup bilet</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#myCarousel" data-slide="prev" class="carousel-control-prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+
+            <a href="#myCarousel" data-slide="next" class="carousel-control-next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+    <section class="py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Repertuar</h1>
+                    <select class="form-control mt-4 w-50"
+                        onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+                        <option value="" selected disabled hidden>Wybierz kino</option>
+                        <option value="rep/Wrocław">Wrocław</option>
+                        <option value="rep/Katowice">Katowice</option>
+                        <option value="rep/Rybnik">Rybnik</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<%- include('partials/footer') %>

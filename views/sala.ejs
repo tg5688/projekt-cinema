@@ -1,0 +1,95 @@
+<%- include('partials/header') %>
+<main>
+    <section class="py-3" id="modal">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="my-3"><%= cityName %></h1>
+                    <h2 class="my-3"><%= movie %></h2>
+                    <h3 class="my-3">Wybierz miejsca</h3>
+                    <hr class="mb-5">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-9 mx-auto">
+                    <div>Czas na rezerwacje miejsce: <span class="countdown">10:00</span> sek.</div>
+                    <div class="screen">
+                        <p class="text-center text-uppercase">Ekran<p>
+                    </div>
+                </div>
+            </div>
+            <% for (let i = 0; i < seats.length; i++){ %>
+            <div class="row mt-1 justify-content-center">
+                <% seats[i].forEach(function(item){ %>
+                <% if(!item.empty && !item.book){ %>
+                <div class="seat">
+                </div>
+                <%  }else if(!item.empty && item.book){ %>
+                <div class="seat--book">
+                </div>
+                <%  }else{ %>
+                <div class="seat--empty">
+                </div>
+                <%  } %>
+                <%  }) %>
+            </div>
+            <%  } %>
+            <hr class="mt-5">
+            <div class="row mt-3">
+                <div class="legend">
+                    <p class="legend__heading">Legenda<p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 d-flex justify-content-center">
+                    <div class="legend__seat--free"></div>
+                    <p class="legend__text">Miejsce wolne</p>
+                </div>
+                <div class="col-md-4 d-flex justify-content-center">
+                    <div class="legend__seat--busy"></div>
+                    <p class="legend__text">Miejsce zajęte</p>
+                </div>
+                <div class="col-md-4 d-flex justify-content-center">
+                    <div class="legend__seat--select"></div>
+                    <p class="legend__text">Miejsce wybrane</p>
+                </div>
+            </div>
+            <hr class="mt-5">
+            <div class="row mt-3 align-items-center">
+                <div class="col">
+                    <div class="selected-seats">
+                        <p class="selected-seats__heading">Wybrane miejsca (<span class="count-seats"></span>)</p>
+                        <p class="selected-seats__text">Cena: <span class="count-price">0</span> zł</p>
+                    </div>
+                </div>
+            </div>
+            <p>Aby zakupić bilety należy najpierw się zarejestrować - <a href="/rejestracja">Zarejestruj
+                    się</a>
+                <p>
+
+                    <form action="/rezerwacja" method="POST" onsubmit="return validate()" novalidate>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <input type="email" class="form-control" name="email" id="email"
+                                    placeholder="Wpisz email">
+                                <p class="error"></p>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="password" class="form-control" name="password" placeholder="Wpisz hasło">
+                                <p class="error"></p>
+
+                                <input type="hidden" name="price"></input>
+                                <input type="hidden" name="movie" value="<%= movie %>"></input>
+                                <input type="hidden" name="count"></input>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <button type="submit" class="btn btn-dark">Rezerwuj</button>
+                            </div>
+                        </div>
+                    </form>
+        </div>
+    </section>
+</main>
+
+
+<%- include('partials/footer') %>

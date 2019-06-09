@@ -1,0 +1,36 @@
+<%- include('partials/header') %>
+<main>
+    <section class="py-3">
+        <div class="container">
+            <h1 class="my-3">Rejestracja konta</h1>
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <form action="/rejestracja" method="POST" onsubmit="return validate()" novalidate>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" name="email" id="email">
+                                    <p class="error"></p>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control" name="password" id="password">
+                                    <p class="error"></p>
+                                </div>
+                                <div class="text-right">
+                                    <button type="submit" class="btn btn-dark" id="register">Zarejestruj</button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<%- include('partials/footer') %>

@@ -1,0 +1,13 @@
+.error {
+    margin-top: 8px;
+    color: red;
+}
+
+input.invalid {
+    border-color: #900;
+    background-color: #FDD;
+}
+
+input:focus.invalid {
+    outline: none;
+}
