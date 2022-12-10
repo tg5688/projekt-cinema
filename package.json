@@ -19,7 +19,7 @@
     "body-parser": "^1.18.3",
     "bootstrap": "^4.3.1",
     "ejs": "^2.6.1",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "mongodb": "^3.2.6",
     "nodemailer": "^6.1.1"
   }
